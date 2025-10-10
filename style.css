@@ -1,0 +1,93 @@
+/* === GLOBAL === */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* === CALCULATOR === */
+/* FRAME */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 600px;
+    width: 450px;
+    background-color: lightgrey;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+/* DISPLAY */
+#display {
+    height: 25%;
+    width: 95%;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/* BUTTONS */
+#buttons {
+    height: 65%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ERASE-BUTTONS */
+#erase {
+    display: flex;
+    gap: 10px;
+    height: 20%;
+    width: 100%;
+}
+
+.erase-button {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#clear {
+    background-color: rgb(255, 127, 127);
+}
+
+#delete {
+    background-color: rgb(127, 127, 255);
+}
+
+/* NUMBER AND OPERATOR-BUTTONS */
+#numbers-and-operators {
+    box-sizing: content-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    height: 80%;
+    width: 100%;
+}
+
+.number-button,
+.operator-button,
+#dot-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24%;
+    height: 25%;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 10px;
+}
