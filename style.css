@@ -27,11 +27,15 @@ body {
 
 /* DISPLAY */
 #display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     height: 25%;
     width: 95%;
     background-color: whitesmoke;
     border: 2px solid black;
     border-radius: 10px;
+    font-size: 2.5rem;
 }
 
 /* BUTTONS */

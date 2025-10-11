@@ -1,7 +1,7 @@
 'use strict';
 
 // Variables
-let num1;
+let num1 = '';
 let num2;
 let operator;
 
@@ -39,3 +39,13 @@ function operate(operator, num1, num2) {
             break;
     }
 }
+
+const numBtns = document.querySelectorAll('.number-button');
+const display = document.querySelector('#display');
+
+numBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        num1 += btn.textContent;
+        display.textContent = num1;
+    })
+});
