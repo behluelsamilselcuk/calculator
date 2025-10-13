@@ -61,7 +61,14 @@ numBtns.forEach(btn => {
 
 opBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        if (num1 !== '') {
+        if (num1 !== '' && operator !== '' && num2 !== '') {
+            const result = operate(operator, num1, num2);
+            num1 = result;
+            num2 = '';
+            operator = btn.textContent
+            display.textContent = num1 + ' ' + operator;
+        }
+        else if (num1 !== '') {
             display.textContent = '';
             operator = btn.textContent;
             display.textContent = num1 + ' ' + operator;
