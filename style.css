@@ -85,7 +85,8 @@ body {
 
 .number-button,
 .operator-button,
-#dot-button {
+#dot-button,
+#equal-button {
     display: flex;
     justify-content: center;
     align-items: center;
