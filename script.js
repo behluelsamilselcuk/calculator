@@ -62,7 +62,10 @@ numBtns.forEach(btn => {
 opBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         if (num1 !== '' && operator !== '' && num2 !== '') {
-            const result = operate(operator, num1, num2);
+            let result = parseFloat(operate(operator, num1, num2)).toFixed(2);
+            if (result.includes('.00')) {
+                result = parseInt(result);
+            }
             num1 = result;
             num2 = '';
             operator = btn.textContent
