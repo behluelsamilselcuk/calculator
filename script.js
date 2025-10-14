@@ -87,6 +87,9 @@ equBtn.addEventListener('click', () => {
     if ((num1 !== '' && operator === '') || (num1 !== '' && operator !== '' && num2 === '')) {
         return;
     }
+    if (operator == '/' && num2 == 0) {
+        return display.textContent = 'ERROR';
+    }
  
     display.textContent = '';
     const result = operate(operator, num1, num2);
