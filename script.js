@@ -4,6 +4,7 @@
 let num1 = '';
 let num2 = '';
 let operator = '';
+let result = '';
 
 // Functions for mathematical operators
 function add(num1, num2) {
@@ -38,6 +39,9 @@ function operate(operator, num1, num2) {
     }
 }
 
+// ===== EXTRAS =====
+// === Betätigen der Buutons des Rechners ===
+// Nummer, Operator und Gleichheitsbutton
 const numBtns = document.querySelectorAll('.number-button');
 const display = document.querySelector('#display');
 const opBtns = document.querySelectorAll('.operator-button')
@@ -62,7 +66,7 @@ numBtns.forEach(btn => {
 opBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         if (num1 !== '' && operator !== '' && num2 !== '') {
-            let result = parseFloat(operate(operator, num1, num2)).toFixed(2);
+            result = parseFloat(operate(operator, num1, num2)).toFixed(2);
             if (result.includes('.00')) {
                 result = parseInt(result);
             }
@@ -90,4 +94,15 @@ equBtn.addEventListener('click', () => {
     operator = '';
     num1 = '';
     num2 = '';
+})
+
+// CLEAR-Button
+const clearBtn = document.querySelector('#clear');
+
+clearBtn.addEventListener('click', () => {
+    num1 = '';
+    num2 = '';
+    operator = '';
+    result = '';
+    display.textContent = '';
 })
