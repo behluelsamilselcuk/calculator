@@ -80,6 +80,10 @@ opBtns.forEach(btn => {
 });
 
 equBtn.addEventListener('click', () => {
+    if ((num1 !== '' && operator === '') || (num1 !== '' && operator !== '' && num2 === '')) {
+        return;
+    }
+ 
     display.textContent = '';
     const result = operate(operator, num1, num2);
     display.textContent = result;
